@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Newsitem from "./Newsitem";
 import Spinner from "./Spinner";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 export default function News(props) {
@@ -49,6 +49,7 @@ export default function News(props) {
 
   useEffect(() => {
     Update();
+    // eslint-disable-next-line
   }, [])
 
   const fetchMoreData = async () => {
@@ -59,7 +60,7 @@ export default function News(props) {
     <>
       <h1
         className="text-center"
-        style={{ padding: "5px" }}
+        style={{ padding: "5px" , margin: "10px"}}
       >{`NewsMonkey - Top ${props.UP(props.category)} Headlines`}</h1>
       {loading && <Spinner />}
 
