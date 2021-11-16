@@ -1,42 +1,37 @@
 import React, { Component } from "react";
 
-export default class Newsitem extends Component {
-  render() {
-    let { mode, title, description, imageurl, newsurl, date, author, source } =
-      this.props;
-    // console.log("mode", this.props.mode);
-
-    return (
-      <div>
+export default function Newsitem(props) {
+  return (
+    <div>
         <div
           className="card my-3"
           style={{
             width: "21rem",
-            color: mode === "Light" ? "white" : "black",
-            background: mode === "Light" ? "black" : "white",
+            color: props.mode === "Light" ? "white" : "black",
+            background: props.mode === "Light" ? "black" : "white",
           }}
         >
-          <span className={`badge bg-danger`}>{source}</span>
+          <span className={`badge bg-danger`}>{props.source}</span>
           <img
             src={
-              imageurl
-                ? imageurl
+              props.imageurl
+                ? props.imageurl
                 : "https://st1.latestly.com/wp-content/uploads/2021/11/gvegvesgvfegfvefgh8ucroprdgjubvrjurrrrrrrrrrrrrrrrrr20210828163839f20210828172_kFaYcUR-588x441.jpg"
             }
             className="card-img-top"
             alt="..."
           />
           <div className="card-body">
-            <h5 className="card-title">{title}</h5>
-            <p className="card-text">{description}</p>
+            <h5 className="card-title">{props.title}</h5>
+            <p className="card-text">{props.description}</p>
             <p className="card-text">
               <small className="text-muted">
-                Last updated {new Date(date).toGMTString()} mins ago By{" "}
-                {author ? author : "Unknown"}
+                Last updated {new Date(props.date).toGMTString()} mins ago By{" "}
+                {props.author ? props.author : "Unknown"}
               </small>
             </p>
             <a
-              href={newsurl}
+              href={props.newsurl}
               className="btn btn-sm btn-primary"
               target="_blank"
               rel="noopener noreferrer"
@@ -46,6 +41,6 @@ export default class Newsitem extends Component {
           </div>
         </div>
       </div>
-    );
-  }
+  )
 }
+

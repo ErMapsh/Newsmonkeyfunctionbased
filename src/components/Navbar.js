@@ -1,18 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-export default class Navbar extends Component {
-  render() {
-    let { mode, togglemode, NewsMonkey } = this.props;
-    // console.log(this.props);
-    let mystyle = { color: "white" };
-
-    return (
-      <div>
+export default function Navbar(props) {
+  let mystyle = { color: "white" };
+  return (
+    <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
             <label className="navbar-brand" style={mystyle} href="/">
-              {NewsMonkey}
+              {props.NewsMonkey}
             </label>
             <button
               className="navbar-toggler"
@@ -79,7 +75,7 @@ export default class Navbar extends Component {
                 <input
                   className="form-check-input"
                   type="checkbox"
-                  onClick={togglemode}
+                  onClick={props.togglemode}
                   id="flexSwitchCheckDefault"
                 />
                 <label
@@ -87,13 +83,13 @@ export default class Navbar extends Component {
                   style={mystyle}
                   htmlFor="flexSwitchCheckDefault"
                 >
-                  Enable {mode} Mode
+                  Enable {props.mode} Mode
                 </label>
               </div>
             </div>
           </div>
         </nav>
       </div>
-    );
-  }
+  )
 }
+
