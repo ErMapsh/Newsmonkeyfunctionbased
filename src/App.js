@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, {useState } from "react";
 import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import News from "./components/News";
@@ -8,7 +8,7 @@ import LoadingBar from "react-top-loading-bar";
 export default function App() {
   //useState variable:
   const [mode, setmode] = useState("Light");
-  const [NewsMonkey, setNewsMonkey] = useState("NEWSMONKEY");
+  const NewsMonkey ="NEWSMONKEY";
   const [alert, setalert] = useState(null);
   const [progress, setprogress] = useState(0);
 

@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Newsitem from "./Newsitem";
 import Spinner from "./Spinner";
 import PropTypes from "prop-types";
@@ -100,11 +100,11 @@ export default function News(props) {
   );
 }
 
-// News.defaultProps = {
-//   country: "in",
-//   pageSize: 15,
-//   category: "general",
-// };
+News.defaultProps = {
+  country: "in",
+  pageSize: 15,
+  category: "general",
+};
 
 // News.PropTypes = {
 //   country: PropTypes.string,
