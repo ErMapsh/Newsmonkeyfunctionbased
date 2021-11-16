@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Alert(props) {
   return (
-    <div style={{height:"50px", marginTop: "55px"}}>
+    <div style={{height:"50px", marginTop: "55px", marginBottom: "5px"}}>
       {props.alert && (
         <div className="alert alert-success text-center" role="alert" >
           {props.UP(props.alert.type)} ❤{props.alert.msg}❤
