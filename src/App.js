@@ -13,7 +13,7 @@ export default function App() {
   const [progress, setprogress] = useState(0);
 
   //for api
-  const api = process.env.REACT_APP_NEWS_API;
+  const api = "27c3464ae7ff4686b77cd16eb7a9c34f";
 
   //for loader:
   // const state = {
